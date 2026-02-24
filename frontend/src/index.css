@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pure black background */
+html, body, #root {
+  @apply bg-black text-white overflow-x-hidden;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  @apply bg-black text-white;
+  font-family: 'Times New Roman', Times, serif;
+}
