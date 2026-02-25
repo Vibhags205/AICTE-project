@@ -23,6 +23,10 @@ SETTINGS = {
     "max_chars": int(os.getenv("NOTES_MAX_CHARS", "800"))
 }
 
+@app.get("/")
+async def root():
+    return {"message": "Lecture Notes Generator API", "status": "running"}
+
 @app.get("/health")
 async def health_check():
     return {"status": "Backend is running!"}
