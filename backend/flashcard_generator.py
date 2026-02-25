@@ -1,4 +1,8 @@
+import os
 import ollama
+
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+client = ollama.Client(host=OLLAMA_HOST)
 
 def generate_flashcards(transcript):
 
@@ -11,7 +15,7 @@ Transcript:
 {transcript[:1500]}"""
 
     try:
-        response = ollama.chat(
+        response = client.chat(
             model="mistral",
             messages=[{"role": "user", "content": prompt}],
             timeout=120

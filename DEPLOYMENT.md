@@ -26,10 +26,11 @@ git push
 ### 3. Configure Environment Variables on Railway
 1. Go to your Railway project
 2. Click the service → **Variables**
-3. Add:
+3. Add these (Railway will auto-detect some):
+   - `OLLAMA_HOST=http://127.0.0.1:11434` (tells backend where Ollama is)
    - `OLLAMA_MODEL=mistral` (or your preferred model)
    - `NOTES_MAX_CHARS=800`
-   - `PORT=8000`
+   - `PORT=8000` (Railway may set this automatically)
 
 ### 4. Get Your Backend URL
 1. In Railway, click your service
